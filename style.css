@@ -1,0 +1,94 @@
+html, body{
+	background-color: aqua;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	overflow: hidden;
+	height: 100vh;
+	width: 100vw;
+}
+
+.box{
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	overflow: hidden;
+	justify-content: center;
+}
+
+/* #lmao{
+	height: 40%;
+	width: 40%;
+} */
+
+canvas{
+	border: 1px solid;
+	display: block;
+	width: 100vw;
+	height: 100vh;
+}
+
+.pic{
+	position: fixed;
+	top: 45%;
+	transform: translate(-50%);
+	left: 50%;
+	width: 20%;
+	height: 30vh;
+}
+
+#pic1{
+	z-index: 999;
+}
+
+#pic2{
+	z-index: 1000;
+}
+
+#giftGlid{
+	position: fixed;
+	top: 32%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 50%;
+	height: 20%;
+	max-width: 400px;
+	display: flex;
+	cursor: pointer;
+	z-index: 10001;
+}
+
+#giftGlid.box{
+	animation: moveLeft 2s;
+	animation-fill-mode: forwards;
+	/* animation: moveRight 2s; */
+}
+
+@keyframes moveLeft {
+	/* 0% {transform: translateX(0);} */
+	100% {transform: translateX(200px) rotate(30deg);}
+}
+
+@keyframes moveRight {
+	/* 0% {transform: translateX(0);} */
+	100% {transform: translateX(-200px) rotate(-30deg);}
+}
+
+#gift{
+	position: fixed;
+	top: 60%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 50%;
+	height: 40%;
+	max-width: 400px;
+	display: flex;
+	z-index: 9999;
+	touch-action: manipulation;
+}
+
+@media (max-width: 600px) {
+  #giftGlid, #gift {
+    width: 70%;
+  }
+}
